@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Unscroll – Folios, Activity Booklets, Planners &amp; Notebooks</title>
 <style>
-:root{--bg:#fcf8fd;--surface:#ffffff;--text:#4a4254;--muted:#7d7389;--accent:#bfa8ec;--accent-t:#2f2440;--accent-d:#7355b5;--line:#eee6f5;color-scheme:light;
+:root{--bg:#fffaf5;--surface:#ffffff;--text:#4a3f38;--muted:#85766b;--accent:#ffb98a;--accent-t:#4a2a14;--accent-d:#c2561a;--line:#f6e6d8;color-scheme:light;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 
 
 *{box-sizing:border-box}html{scroll-padding-top:70px;scroll-behavior:smooth}
-body{margin:0;background:linear-gradient(180deg,#fdf3f8 0,#f6f1fd 45%,#f1f8fb 100%) fixed;color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
+body{margin:0;background:linear-gradient(180deg,#fff6ee 0,#fff1e6 45%,#fdf7f0 100%) fixed;color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
 h1,h2,h3,button,input,textarea,select,.sans{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 .wrap{max-width:1040px;margin:0 auto;padding:0 18px}
-header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:linear-gradient(90deg,#ffd6b8,#ffe6cc);border-bottom:2px solid #ffbf94;z-index:5}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
-.logo{font-weight:800;font-size:1.6rem;font-family:system-ui,sans-serif;line-height:1.1;letter-spacing:-.01em;color:var(--accent-d)}
-.tag{display:block;font-weight:400;font-size:.72rem;color:var(--muted);letter-spacing:.02em}
+.logo{font-weight:800;font-size:1.6rem;font-family:system-ui,sans-serif;line-height:1.1;letter-spacing:-.01em;color:#9c3f0c}
+.tag{display:block;font-weight:400;font-size:.72rem;color:#7a4a2a;letter-spacing:.02em}
 nav{display:flex;gap:16px;align-items:center;font-family:system-ui,sans-serif;font-size:.92rem}
 nav a{color:var(--text);text-decoration:none}
-.cartbtn{background:var(--accent);color:var(--accent-t);border:0;border-radius:99px;padding:8px 14px;font-weight:600;cursor:pointer}
+.cartbtn{background:#fff;color:#9c3f0c;border:1px solid #ffbf94;border-radius:99px;padding:8px 14px;font-weight:700;cursor:pointer}
 .hero{padding:44px 0 26px}
 .hero h1{font-size:clamp(1.5rem,4.6vw,2.2rem);line-height:1.15;margin:0 0 10px}
 .hero p{color:var(--muted);max-width:560px;margin:0}
@@ -28,7 +28,7 @@ h2{font-size:1.5rem;margin:40px 0 14px}
 .chip{border:1px solid var(--line);background:var(--surface);color:var(--text);padding:7px 14px;border-radius:99px;cursor:pointer;font-size:.9rem}
 .chip.on{background:var(--accent);color:var(--accent-t);border-color:var(--accent)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(150,120,200,.08)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(200,130,70,.10)}
 .cover{height:130px;display:grid;place-items:center;font-size:3rem}
 .body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
 .cat{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-family:system-ui,sans-serif}
@@ -52,7 +52,8 @@ details{background:var(--surface);border:1px solid var(--line);border-radius:10p
 summary{cursor:pointer;font-weight:600;font-family:system-ui,sans-serif}
 details p{margin:8px 0 0;color:var(--muted)}
 details a{color:var(--accent-d)}
-footer{margin-top:50px;padding:24px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
+footer{margin-top:50px;padding:34px 0 28px;background:linear-gradient(90deg,#ffd6b8,#ffe6cc);border-top:2px solid #ffbf94;color:#5a4030;font-size:.92rem;text-align:center;line-height:1.7}
+.fb{font-weight:800;font-size:1.4rem;color:#9c3f0c;font-family:system-ui,sans-serif}.fl{margin:6px 0}.fl a{color:#9c3f0c;font-weight:600;text-decoration:none;margin:0 6px}.fc{margin-top:12px;font-size:.8rem;opacity:.8}
 .card select{width:100%;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);font-size:.9rem;margin-top:4px}
 .cover.ph{height:auto;display:block;background:#fff}.cover.ph .main{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}.th{display:flex;gap:6px;padding:6px;background:var(--surface)}.thm{width:46px;height:46px;object-fit:cover;border-radius:6px;border:1px solid var(--line);cursor:pointer}
 .empty{color:var(--muted);padding:10px 0;font-family:system-ui,sans-serif}
@@ -112,7 +113,7 @@ footer{margin-top:50px;padding:24px 0;border-top:1px solid var(--line);color:var
 </section>
 </main>
 
-<footer><div class="wrap">© Unscroll · Questions? Send us a DM.</div></footer>
+<footer><div class="wrap"><div class="fb">Unscroll</div><div>Your offline buddy</div><div class="fl"><a href="#shop">Shop</a>·<a href="#order">Order</a>·<a href="#faqs">FAQs</a></div><div>Order through DM on IG, Facebook and TikTok: @unscrollph</div><div class="fc">© Unscroll. All rights reserved.</div></div></footer>
 
 <script>
 var CUR="₱";
