@@ -15,8 +15,9 @@ h1,h2,h3,button,input,textarea,select,.sans{font-family:system-ui,-apple-system,
 .wrap{max-width:1040px;margin:0 auto;padding:0 18px}
 header{position:sticky;top:env(safe-area-inset-top,0px);background:linear-gradient(90deg,#ffd6b8,#ffe6cc);border-bottom:2px solid #ffbf94;z-index:5}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
-.logo{font-weight:800;font-size:1.6rem;font-family:system-ui,sans-serif;line-height:1.1;letter-spacing:-.01em;color:#9c3f0c}
+.logo{font-weight:800;font-size:1.5rem;font-family:system-ui,sans-serif;line-height:1.1;letter-spacing:.05em;color:#9c3f0c}
 .tag{display:block;font-weight:400;font-size:.72rem;color:#7a4a2a;letter-spacing:.02em}
+@media(max-width:480px){nav{gap:10px;font-size:.85rem}.logo{font-size:1.25rem}}
 nav{display:flex;gap:16px;align-items:center;font-family:system-ui,sans-serif;font-size:.92rem}
 nav a{color:var(--text);text-decoration:none}
 .cartbtn{background:#fff;color:#9c3f0c;border:1px solid #ffbf94;border-radius:99px;padding:8px 14px;font-weight:700;cursor:pointer}
@@ -62,7 +63,7 @@ footer{margin-top:50px;padding:34px 0 28px;background:linear-gradient(90deg,#ffd
 </head>
 <body>
 <header><div class="wrap">
-<span class="logo">Unscroll<small class="tag">Your offline buddy</small></span>
+<span class="logo">UNSCROLL<small class="tag">Your offline buddy</small></span>
 <nav><a href="#shop">Shop</a><a href="#order">Order</a><a href="#faqs">FAQs</a><button class="cartbtn" onclick="location.hash='order'">Cart (<span id="cnt">0</span>)</button></nav>
 </div></header>
 
@@ -86,7 +87,6 @@ footer{margin-top:50px;padding:34px 0 28px;background:linear-gradient(90deg,#ffd
 <label for="nm">Full name</label><input id="nm" autocomplete="name">
 <label for="ph">Phone number</label><input id="ph" type="tel" autocomplete="tel">
 <label for="src">Order source</label><select id="src"><option value="">Choose one</option><option>TikTok</option><option>Instagram</option><option>Facebook</option></select>
-<label for="un">Username</label><input id="un" autocomplete="off" placeholder="@yourusername">
 <label for="ad">Complete delivery address (Street, Brgy, City, Province)</label><textarea id="ad" rows="2" autocomplete="street-address"></textarea>
 <label for="nt">Notes (optional)</label><textarea id="nt" rows="2" placeholder="Custom cover, gift message, etc."></textarea>
 <div class="actions">
@@ -113,7 +113,7 @@ footer{margin-top:50px;padding:34px 0 28px;background:linear-gradient(90deg,#ffd
 </section>
 </main>
 
-<footer><div class="wrap"><div class="fb">Unscroll</div><div>Your offline buddy</div><div class="fl"><a href="#shop">Shop</a>·<a href="#order">Order</a>·<a href="#faqs">FAQs</a></div><div>Order through DM on IG, Facebook and TikTok: @unscrollph</div><div class="fc">© Unscroll. All rights reserved.</div></div></footer>
+<footer><div class="wrap"><div class="fb">UNSCROLL</div><div>Your offline buddy</div><div class="fl"><a href="#shop">Shop</a>·<a href="#order">Order</a>·<a href="#faqs">FAQs</a></div><div>Order through DM on IG, Facebook and TikTok: @unscrollph</div><div class="fc">© UNSCROLL. All rights reserved.</div></div></footer>
 
 <script>
 var CUR="₱";
@@ -170,7 +170,7 @@ function render(){
 function summary(){
  var ids=Object.keys(cart),t=0;
  var l=ids.map(function(k){var m=L(k);t+=m.q*m.p;return m.q+" x "+m.n+" - "+fmt(m.q*m.p)});
- return "NEW ORDER\n\n"+l.join("\n")+"\n\nTotal: "+fmt(t)+"\n\nName: "+$("nm").value+"\nPhone: "+$("ph").value+"\nOrder source: "+$("src").value+"\nUsername: "+$("un").value+"\nAddress: "+$("ad").value+"\nNotes: "+$("nt").value;
+ return "NEW ORDER\n\n"+l.join("\n")+"\n\nTotal: "+fmt(t)+"\n\nName: "+$("nm").value+"\nPhone: "+$("ph").value+"\nOrder source: "+$("src").value+"\nAddress: "+$("ad").value+"\nNotes: "+$("nt").value;
 }
 document.addEventListener("click",function(e){
  var t=e.target;
